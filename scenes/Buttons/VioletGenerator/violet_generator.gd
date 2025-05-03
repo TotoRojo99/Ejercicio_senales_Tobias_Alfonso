@@ -1,5 +1,13 @@
 extends TextureButton
 
+var escena_bloque = preload("res://scenes/Blocks/Violet/BlockViolet.tscn")
+var instancia = escena_bloque.instantiate()
+
 
 func _on_button_down() -> void:
-	pass # Replace with function body.
+	generate_block()
+
+
+func generate_block():
+	add_child(instancia)
+	
